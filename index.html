@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Horizon Initiative</title>
+  <meta name="description" content="Green Horizon Initiative is a community-focused project dedicated to sustainability, environmental education, and practical climate action." />
+  <style>
+    :root {
+      --bg: #f4f8f2;
+      --card: #ffffff;
+      --text: #1f2a1f;
+      --muted: #5d6b5d;
+      --primary: #2f7d4a;
+      --primary-dark: #235f38;
+      --border: #dbe7d8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #dff1df, #f4f8f2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--primary-dark);
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      color: var(--primary-dark);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      margin-left: 12px;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      background: #f8fbf7;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 10px;
+      color: var(--primary-dark);
+      font-size: 2rem;
+    }
+
+    .section-title p {
+      margin: 0 auto;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+
+    .highlight {
+      background: #eef8ee;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    ul.clean {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    footer {
+      background: #ecf3ea;
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-3,
+      .two-col,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Green Horizon Initiative</div>
+        <div class="nav-links">
+          <a href="#mission">Mission</a>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Building practical sustainability for healthier communities.</h1>
+          <p>
+            Green Horizon Initiative is an independent project focused on climate awareness,
+            local environmental action, and educational resources that help communities adopt
+            realistic, measurable sustainability practices.
+          </p>
+          <a class="btn btn-primary" href="#programs">Explore Programs</a>
+          <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+        </div>
+
+        <div class="hero-card">
+          <h3>2025 Focus Areas</h3>
+          <p>
+            Our work this year centers on urban greening, waste reduction education,
+            and access to simple sustainability toolkits for schools, small teams,
+            and neighborhood groups.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <strong>18</strong>
+              Community workshops
+            </div>
+            <div class="stat">
+              <strong>42%</strong>
+              Average waste reduction goal
+            </div>
+            <div class="stat">
+              <strong>9</strong>
+              Local partner groups
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="mission">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Mission</h2>
+        <p>
+          We believe environmental progress becomes sustainable when it is local, understandable,
+          and supported by practical tools that people can use every day.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Education</h3>
+          <p>
+            We create accessible guides, event materials, and introductory learning resources
+            focused on climate literacy and responsible consumption.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Community Action</h3>
+          <p>
+            We support local campaigns such as neighborhood cleanups, tree-planting efforts,
+            and small-scale recycling and composting initiatives.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Practical Change</h3>
+          <p>
+            We prioritize realistic improvements: reducing waste, improving resource awareness,
+            and helping small groups build measurable habits over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="highlight">
+    <div class="container">
+      <div class="section-title">
+        <h2>Programs</h2>
+        <p>
+          Our current activities are designed to be flexible, lightweight, and suitable for
+          community centers, schools, and independent volunteer groups.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Workshop Series</h3>
+          <ul class="clean">
+            <li>Introductory sessions on sustainable living</li>
+            <li>Waste sorting and reduction basics</li>
+            <li>Water and energy conservation practices</li>
+            <li>Community planning for local green projects</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Resource Toolkit</h3>
+          <ul class="clean">
+            <li>Printable sustainability checklists</li>
+            <li>Simple event planning templates</li>
+            <li>Volunteer coordination guides</li>
+            <li>Baseline metrics for tracking progress</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Impact Approach</h2>
+        <p>
+          We focus on clear, visible outcomes and encourage small actions that can be repeated
+          and improved over time.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Measure</h3>
+          <p>
+            Establish simple starting points for waste, energy use, or participation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Improve</h3>
+          <p>
+            Introduce realistic changes that fit community capacity and local needs.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Share</h3>
+          <p>
+            Document lessons learned and distribute practical examples for others to adapt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="highlight">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>
+          For partnership inquiries, workshop requests, or educational collaboration,
+          please contact our coordination team.
+        </p>
+      </div>
+
+      <div class="card" style="max-width: 760px; margin: 0 auto;">
+        <p><strong>Email:</strong> contact@greenhorizoninitiative.org</p>
+        <p><strong>Location:</strong> Community-led, remote-first coordination</p>
+        <p><strong>Availability:</strong> Monday to Friday, 9:00 AM – 5:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2025 Green Horizon Initiative. All rights reserved.</div>
+      <div>
+        Sustainability education · Community engagement · Practical climate action
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
